@@ -1,15 +1,30 @@
+import Footer from "./Footer";
 import Sidebar from "./Sidebar";
-import ContentWrapper from './ContentWrapper';
+import Topbar from "./Topbar";
 
 export default function Wrapper () {
     return (
         <div id="wrapper">
             <Sidebar />
 
-            <ContentWrapper />
+        
+		{/*<!-- Content Wrapper -->*/}
+		<div id="content-wrapper" class="d-flex flex-column">
 
-		
-	    </div>
+			{/*<!-- Main Content --> */}
+			<div id="content">
+                
+                <Topbar />
 
+            </div>
+
+            <Footer />
+
+        </div>
+
+
+
+
+        </div>
     );
 };
