@@ -1,13 +1,13 @@
 export default function Topbar () {
     return (
         <>
-				{/*<!-- Topbar -->}*/}
-		     <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+			{/*<!-- Topbar -->}*/}
+		    <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                 {/*<!-- Sidebar Toggle (Topbar) -->*/}
+                {/*<!-- Sidebar Toggle (Topbar) -->
                 <button id="sidebarToggleTop" className="btn btn-link d-md-none rounded-circle mr-3">
                     <i className="fa fa-bars"></i>
-                </button>
+                </button>*/}
 
                 {/*<!-- Topbar Navbar -->*/}
                 <ul className="navbar-nav ml-auto">
@@ -46,7 +46,7 @@ export default function Topbar () {
 
             
 
-    </>
+        </>
 
     )
 
