@@ -12,8 +12,8 @@ export default function Sidebar () {
                     <div className="sidebar-brand-text mx-3">Admin</div>
                 </a>
 
-                {/*<!-- Divider -->
-                <hr className="sidebar-divider my-0"></hr> */}
+                {/*<!-- Divider -->*/}
+                <hr className="sidebar-divider my-0"></hr> 
 
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
@@ -22,8 +22,8 @@ export default function Sidebar () {
                         <span>Dashboard</span></a>
                 </li>
 
-                {/*<!-- Divider -->
-                <hr className="sidebar-divider">-</hr> */}
+                {/*<!-- Divider -->*/}  
+                <hr className="sidebar-divider"></hr> 
 
                 {/*<!-- Heading -->*/}
                 <div className="sidebar-heading">Actions</div>
@@ -50,8 +50,8 @@ export default function Sidebar () {
                         <span>Tables</span></a>
                 </li>
 
-                {/*<!-- Divider -->
-                <hr className="sidebar-divider d-none d-md-block">-</hr> */}
+                {/*<!-- Divider -->*/}
+                <hr className="sidebar-divider d-none d-md-block"></hr> 
     
             </ul>
             {/*<!-- End of Sidebar -->*/}
