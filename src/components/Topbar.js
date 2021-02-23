@@ -1,4 +1,5 @@
 import '../App.css';
+import avatar from '../dummy-avatar.jpg';
 
 export default function Topbar () {
     return (
@@ -38,7 +39,7 @@ export default function Topbar () {
                     <li className="nav-item dropdown no-arrow">
                         <a className="nav-link dropdown-toggle" href="/" id="userDropdown">
                             <span className="mr-2 d-none d-lg-inline text-gray-600 small">Walter White</span>
-                            <img className="img-profile rounded-circle" src="../public/dummy-avatar.jpg" width="60" alt="Avatar"></img>
+                            <img className="img-profile rounded-circle" src={avatar} width="60" alt="Avatar"></img>
                         </a>
                     </li>
                 
