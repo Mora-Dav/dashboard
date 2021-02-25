@@ -13,7 +13,6 @@ export default function DBCategories() {
         })
     },[]);
 
-    console.log (categories);
 
 
     return (
@@ -23,15 +22,15 @@ export default function DBCategories() {
                 <div className="card-header py-3">
                     <div className="card shadow mb-4">
                         <h6 className="m-0 font-weight-bold text-primary">Categories in Data Base</h6>
-                    <div className="card-body">
-                        <div className="row">
+                        <div className="card-body">
+                            <div className="row">
 
-                            {
-                                categories.map((category,i)=>  <ButtonCategory categoryName={category.name} key = {i} />)
-                            }
+                                {
+                                    categories.map((category, i) => <ButtonCategory categoryName={category.name} key={i} />)
+                                }
 
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
