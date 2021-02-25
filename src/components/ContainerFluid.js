@@ -1,6 +1,6 @@
 import Card from './Card';
-import ButtonCategory from './ButtonCategory';
 import product_dummy from '../product_dummy.svg';
+import DBCategories from './DBCategories';
 
 export default function ContainerFluid () {
     return (
@@ -39,19 +39,10 @@ export default function ContainerFluid () {
                     </div>
 
                     {/*<!-- Categories in DB -->*/}
-                    <div className="col-lg-6 mb-4">						
-                        <div className="card shadow mb-4">
-                            <div className="card-header py-3">
-                                <h6 className="m-0 font-weight-bold text-primary">Categories in Data Base</h6>
-                            </div>
-                            <div className="card-body">
-                                <div className="row">
-                                   <ButtonCategory />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+                  
+                    <DBCategories />
+
+                </div>
             </div>
             {/*<!-- /.container-fluid -->*/}
         </>
