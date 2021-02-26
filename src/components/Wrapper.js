@@ -1,9 +1,10 @@
 import product_dummy from '../product_dummy.svg';
 import {useEffect, useState} from 'react';
 
-import Footer from "./Footer";
-import Sidebar from "./Sidebar";
+import Footer from './Footer';
+import Sidebar from './Sidebar';
 import Topbar from './Topbar';
+import DBCategories from './DBCategories'
 
 
 
@@ -11,6 +12,7 @@ export default function Wrapper () {
 
     const [products, setProduct] = useState([]);
     const [users, setUser] = useState([]);
+    
 
     useEffect(()=> {
         fetch ("http://localhost:3000/api/products/")
@@ -19,7 +21,13 @@ export default function Wrapper () {
             })
     },[]);
 
+
     console.log(products);
+    console.log (products);
+
+    const categorias = products.meta
+
+    console.log (categorias)
 
     useEffect(()=> {
         fetch ("http://localhost:3000/api/users/")
@@ -141,48 +149,7 @@ export default function Wrapper () {
                                 </div>
                                 <div className="card-body">
                                     <div className="row">
-                                        <div className="col-lg-6 mb-4">
-                                            <div className="card bg-info text-white shadow">
-                                                <div className="card-body">
-                                                    Category 01
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6 mb-4">
-                                            <div className="card bg-info text-white shadow">
-                                                <div className="card-body">
-                                                    Category 02
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6 mb-4">
-                                            <div className="card bg-info text-white shadow">
-                                                <div className="card-body">
-                                                    Category 03
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6 mb-4">
-                                            <div className="card bg-info text-white shadow">
-                                                <div className="card-body">
-                                                    Category 04
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6 mb-4">
-                                            <div className="card bg-info text-white shadow">
-                                                <div className="card-body">
-                                                    Category 05
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6 mb-4">
-                                            <div className="card bg-info text-white shadow">
-                                                <div className="card-body">
-                                                    Category 06
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <DBCategories />
                                     </div>
                                 </div>
                             </div>
