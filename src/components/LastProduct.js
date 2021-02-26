@@ -23,7 +23,7 @@ export default function LastProduct(){
         <>
                     {/*<!-- Last Product in DB -->*/ }
             {
-                products.length == 0
+                products.length === 0
                 ?
 
                     <div className="spinner-border" role="status">
@@ -31,7 +31,6 @@ export default function LastProduct(){
                     </div>
 
                     :
-
 
 
                     < div className="card shadow mb-4">
