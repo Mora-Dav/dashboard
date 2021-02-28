@@ -12,31 +12,38 @@ export default function Wrapper () {
 
     const [products, setProduct] = useState([]);
     const [users, setUser] = useState([]);
+    const [categories, setCategory] = useState([]);
     
 
     useEffect(()=> {
         fetch ("http://localhost:3000/api/products/")
         .then (res => res.json())
-        .then (data => {setProduct(data)
-            })
-    },[]);
+        .then (data => {setProduct(data.data)})
+        
+        fetch ("http://localhost:3000/api/products/")
+        .then (res => res.json())
+        .then (data => {setCategory((data.meta).data)})
 
-
-    console.log(products);
-    console.log (products);
-
-    const categorias = products.meta
-
-    console.log (categorias)
-
-    useEffect(()=> {
         fetch ("http://localhost:3000/api/users/")
         .then (res => res.json())
-        .then (data => {setUser(data)
-        })
+        .then (data => {setUser(data)});
+
+    
     },[]);
 
-    console.log (users);
+    useEffect(()=> {
+        setCategory(products.meta)
+    },[products])
+
+
+    //console.log('Productos=' + products);
+
+    
+
+    console.log ('Categorias = '+ categories)
+
+
+    //console.log ('Estos son los usuarios = ' + users);
 
     
 

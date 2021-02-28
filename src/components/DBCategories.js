@@ -1,3 +1,5 @@
+import Category from './Category'
+
 export default function DBCategories () {
     return (
         <>
@@ -15,15 +17,3 @@ export default function DBCategories () {
     )
 }
 
-function Category ({categoria}){
-    return (
-        <div className="col-lg-6 mb-4">
-            <div className="card bg-info text-white shadow">
-                <div className="card-body">
-                    {categoria}
-                </div>
-            </div>
-        </div>
-      
-    )
-}
