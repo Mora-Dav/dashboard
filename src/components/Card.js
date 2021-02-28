@@ -1,5 +1,9 @@
 
 export default function Card () {
+    
+    
+    
+    
     return (
         <>
            {/*<!-- Amount of Products in DB -->*/}
