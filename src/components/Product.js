@@ -9,9 +9,10 @@ export default function Product () {
     fetch ("https://freshmarket-grupo9.herokuapp.com/api/products/")
         .then(res => res.json())
         .then(data =>{setLastProduct(data.meta.lastProduct)})
-    return (
+    
         
-
+    
+        return (
             <div className="col-lg-6 mb-4">
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
@@ -21,13 +22,15 @@ export default function Product () {
                         <div className="text-center">
                             <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: "25rem" }} src={product_dummy} alt="product"></img>
                         </div>
-                        <h6>{lastProduct.name}</h6>
-                        <p>{lastProduct.description}</p>
+                       {/*} <h6>{lastProduct.name}</h6>
+                        <p>{lastProduct.description}</p> */}
                         <a target="_blank" rel="nofollow" href="/">View product detail</a>
                     </div>
                 </div>
             </div>
             
+          
         
     )
+        
 }
