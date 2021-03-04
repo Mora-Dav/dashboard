@@ -1,18 +1,25 @@
+import {useEffect, useState} from 'react';
 import Category from './Category'
 
+
 export default function DBCategories () {
+
+    const [categories, setCategories] = useState([]);
+
+    useEffect(()=> {
+        fetch ("https://freshmarket-grupo9.herokuapp.com/api/products/")
+        .then (res => res.json())
+        .then (data => {setCategories(data.meta.categorias)})
+    },[]);
+
+    console.log(categories)
+
     return (
         <>
-        <Category categoria= "Categoria 1" />
-        <Category categoria= "Categoria 2" />
-        <Category categoria= "Categoria 3" />
-        <Category categoria= "Categoria 4" />
-        <Category categoria= "Categoria 5" />
-        <Category categoria= "Categoria 6" />
-
-        
-
-        
+        {
+        categories.map ((category,i)=> <Category category={category.name} index={i} />
+        )
+        }    
         </>
     )
 }

@@ -5,45 +5,37 @@ import Sidebar from './Sidebar';
 import Topbar from './Topbar';
 import DBCategories from './DBCategories'
 import Product from './Product';
-
+import InfoCard from './InfoCard';
 
 
 export default function Wrapper () {
 
     const [products, setProduct] = useState([]);
     const [users, setUser] = useState([]);
-    const [categories, setCategory] = useState([]);
+
     
 
     useEffect(()=> {
-        fetch ("http://localhost:3000/api/products/")
+        fetch ("https://freshmarket-grupo9.herokuapp.com/api/products/")
         .then (res => res.json())
         .then (data => {setProduct(data.data)})
         
-       // fetch ("http://localhost:3000/api/products/")
-        //.then (res => res.json())
-        //.then (data => {setCategory((data.meta).data)})
+      
 
-        fetch ("http://localhost:3000/api/users/")
+        fetch ("https://freshmarket-grupo9.herokuapp.com/api/users/")
         .then (res => res.json())
         .then (data => {setUser(data)});
 
     
     },[]);
 
-    useEffect(()=> {
-        setCategory(products.meta)
-    },[products])
 
 
-    //console.log('Productos=' + products);
 
-    
-
-    console.log ('Categorias = '+ categories)
+    console.log('Productos=' + products);
 
 
-    //console.log ('Estos son los usuarios = ' + users);
+    console.log ('Estos son los usuarios = ' + users);
 
     
 
@@ -76,60 +68,8 @@ export default function Wrapper () {
 
                     {/*<!-- Content Row -->*/}
                     <div className="row">
-
-                        {/*<!-- Amount of Products in DB -->*/}
-                        <div className="col-md-4 mb-4">
-                            <div className="card border-left-primary shadow h-100 py-2">
-                                <div className="card-body">
-                                    <div className="row no-gutters align-items-center">
-                                        <div className="col mr-2">
-                                            <div className="text-xs font-weight-bold text-primary text-uppercase mb-1"> Products in Data Base</div>
-                                            <div className="h5 mb-0 font-weight-bold text-gray-800">135</div>
-                                        </div>
-                                        <div className="col-auto">
-                                            <i className="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/*<!-- $$$ of all products in DB -->*/}
-                        <div className="col-md-4 mb-4">
-                            <div className="card border-left-success shadow h-100 py-2">
-                                <div className="card-body">
-                                    <div className="row no-gutters align-items-center">
-                                        <div className="col mr-2">
-                                            <div className="text-xs font-weight-bold text-success text-uppercase mb-1"> Amount in products</div>
-                                            <div className="h5 mb-0 font-weight-bold text-gray-800">$546.456</div>
-                                        </div>
-                                        <div className="col-auto">
-                                            <i className="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/*<!-- Amount of users in DB -->*/}
-                        <div className="col-md-4 mb-4">
-                            <div className="card border-left-warning shadow h-100 py-2">
-                                <div className="card-body">
-                                    <div className="row no-gutters align-items-center">
-                                        <div className="col mr-2">
-                                            <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">Users quantity
-                                            </div>
-                                            <div className="h5 mb-0 font-weight-bold text-gray-800">38</div>
-                                        </div>
-                                        <div className="col-auto">
-                                            <i className="fas fa-user-check fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <InfoCard />
                     </div>
-
                     {/*<!-- Content Row -->*/}
                     <div className="row">
                         {/*<!-- Last Product in DB -->*/}
@@ -146,10 +86,10 @@ export default function Wrapper () {
         
             :
 
-            products.map((product,i) => (
-                <Product products={products} key={i} />
+            
+                <Product  />
 
-            ))
+        
 
             
             }
