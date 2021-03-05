@@ -18,7 +18,8 @@ export default function LastProduct(){
         
     },[]);
 
-    useEffect(()=>{
+  /*  useEffect(()=>{
+        console.log(products)
         fetch( "http://localhost:3000/api/products/"+products.meta.lastProduct.id)
         .then(res => res.json())
         .then(data =>{setDetailProduct(data)
@@ -30,7 +31,7 @@ export default function LastProduct(){
     
 
     console.log(products)
-    
+    */
 
     return (
         <>
@@ -54,9 +55,9 @@ export default function LastProduct(){
                             <div className="card-body">
                                 <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: "25rem" }} src={product_dummy} alt="product"></img>
                             </div>
-                            <h6>{products.meta.lastProduct.name}</h6>
+                          {/*}  <h6>{products.meta.lastProduct.name}</h6>
                             <p>{products.meta.lastProduct.description}</p>
-                            <a target="_blank" rel="nofollow" href="/">View product detail</a>
+                            <a target="_blank" rel="nofollow" href="/">View product detail</a>*/}
                         </div>
                     <p>{products.meta.total}</p>
                     </div>
