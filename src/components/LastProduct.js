@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 export default function LastProduct(){
 
-    const [products, setProduct] = useState([]);
+    const [products, setProduct] = useState(null);
     const [DetailProduct, setDetailProduct]= useState([]);
 
     
@@ -18,9 +18,17 @@ export default function LastProduct(){
         
     },[]);
 
+<<<<<<< HEAD
   /*  useEffect(()=>{
         console.log(products)
         fetch( "http://localhost:3000/api/products/"+products.meta.lastProduct.id)
+=======
+    useEffect(()=>{
+        if (!products){
+            return
+        }
+        fetch( "http://localhost:3000/api/products/" + products.meta.lastProduct.id)
+>>>>>>> 061a2871474806199b2512f1a3b2f9865336b252
         .then(res => res.json())
         .then(data =>{setDetailProduct(data)
         })
@@ -37,7 +45,7 @@ export default function LastProduct(){
         <>
                     {/*<!-- Last Product in DB -->*/ }
             {
-                products.length === 0
+                !products
                 ?
 
                     <div className="spinner-border" role="status">
