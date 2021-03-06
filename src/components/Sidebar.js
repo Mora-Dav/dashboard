@@ -51,5 +51,5 @@ export default function Sidebar () {
             {/*<!-- Divider -->*/}
             <hr className="sidebar-divider d-none d-md-block"></hr>
         </ul>
-    )
+  )
 }
