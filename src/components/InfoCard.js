@@ -6,7 +6,7 @@ export default function InfoCard(){
     const [users, setUsers] = useState([])
 
     useEffect(()=> {
-        fetch ("https://freshmarket-grupo9.herokuapp.com/api/products/")
+        fetch ("http://localhost:3000/api/products")
         .then (res => res.json())
         .then (data =>{setMeta(data.meta)})
 
