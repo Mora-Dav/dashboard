@@ -1,4 +1,5 @@
 import './App.css';
+import Wrapper from './components/Wrapper';
 
 import Wrapper from './components/Wrapper';
 
