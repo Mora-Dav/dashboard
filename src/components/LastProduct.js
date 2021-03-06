@@ -32,11 +32,13 @@ export default function LastProduct(){
     
 
     console.log(products)
-    
+    console.log(detailProduct.urlImage)
 
     return (
         <>
                     {/*<!-- Last Product in DB -->*/ }
+
+                
             {
                 !products
                 ?
@@ -54,11 +56,11 @@ export default function LastProduct(){
                             <div className="text-center">
                             </div>
                             <div className="card-body">
-                                <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: "25rem" }} src={product_dummy} alt="product"></img>
+                                <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: "25rem" }} src={detailProduct.urlImage} alt="product"></img>
                             </div>
                             <h6>{detailProduct.name}</h6>
                             <p>{detailProduct.description}</p>
-                            <a target="_blank" rel="nofollow" href="/">View product detail</a>
+                            <a target="_blank" rel="noreferrer" href={"http://localhost:3000/product/"+detailProduct.id+"/detail"}>View product detail</a>
                         </div>
                     </div>
 

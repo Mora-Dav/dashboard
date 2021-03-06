@@ -4,12 +4,12 @@ import Footer from './Footer';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
 import DBCategories from './DBCategories'
-import Product from './Product';
+import LastProduct from './LastProduct';
 import InfoCard from './InfoCard';
 
 
 export default function Wrapper () {
-
+{
     const [products, setProduct] = useState([]);
     const [users, setUser] = useState([]);
 
@@ -37,7 +37,7 @@ export default function Wrapper () {
 
     console.log ('Estos son los usuarios = ' + users);
 
-    
+}
 
     return (
     <>
@@ -73,26 +73,16 @@ export default function Wrapper () {
                     {/*<!-- Content Row -->*/}
                     <div className="row">
                         {/*<!-- Last Product in DB -->*/}
-                        {
-            {products}.length === 0
-
-            ?
-            
-            <button className="btn btn-primary" type="button" disabled>
-                <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                <span className="visually-hidden">Loading...</span>
-            </button>
-            
-        
-            :
+                        
+          
 
             
-                <Product  />
+                            <LastProduct  />
 
         
 
             
-            }
+                        </div>
         
                     
                        
@@ -110,7 +100,7 @@ export default function Wrapper () {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                   
                 </div>
                 {/*<!-- /.container-fluid -->*/}
             </div>

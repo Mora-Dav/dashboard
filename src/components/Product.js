@@ -1,4 +1,4 @@
-import product_dummy from '../product_dummy.svg';
+/*import product_dummy from '../product_dummy.svg';
 import {useState} from 'react';
 
 
@@ -22,8 +22,8 @@ export default function Product () {
                         <div className="text-center">
                             <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: "25rem" }} src={product_dummy} alt="product"></img>
                         </div>
-                       {/*} <h6>{lastProduct.name}</h6>
-                        <p>{lastProduct.description}</p> */}
+                        {/*<h6>{lastProduct.name}</h6>
+                        <p>{lastProduct.description}</p> }
                         <a target="_blank" rel="nofollow" href="/">View product detail</a>
                     </div>
                 </div>
@@ -33,4 +33,6 @@ export default function Product () {
         
     )
         
-}
+        
+       }
+    */
