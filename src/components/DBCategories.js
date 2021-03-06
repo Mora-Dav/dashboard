@@ -18,7 +18,7 @@ export default function DBCategories () {
     return (
         <>
         {
-        categories.map ((category,i)=> <Category category={category.name} index={i} />
+        categories.map ((category,i)=> <Category category={category.name} key={i} />
         )
         }    
         </>
