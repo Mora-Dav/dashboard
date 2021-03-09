@@ -1,4 +1,3 @@
-import product_dummy from '../product_dummy.svg';
 import { useEffect, useState } from 'react';
 
 
